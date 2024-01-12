@@ -13,6 +13,9 @@ var x = 0,
 var windowX, windowY;
 //记录按键被按下的时间以便判断长按等动作
 var downTime;
+
+toast("剪贴板内容为:" + getClip());
+
 window.action.setOnTouchListener(function(view, event) {
     switch (event.getAction()) {
         case event.ACTION_DOWN:
