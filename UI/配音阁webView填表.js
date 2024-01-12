@@ -129,7 +129,6 @@ toast("载入完成可以合成啦")
 setInterval(() => {}, 1000);
 
 function 文字转语音(内容, 路径) {
-    //内容 = "虽然我想不太可能。你该不会是为了帮助他人啊,正义什么的……这种胡闹的玩笑而和这家伙契约的吧~!"
     ui.run(function() {
         w.a.evaluateJavascript("语音url生成('" + 内容 + "'," + 发音 + ");", function(f) {
             toastLog("获取语音中", f)
@@ -162,6 +161,9 @@ function qq文字转语音(qq) {
     if (界面 = id("input").findOnce()) {
         内容 = 界面.text()
     }
+
+    内容 = "你好, 我是宝总";
+
     if (!内容) {
         toastLog("内容为空")
         return 0
